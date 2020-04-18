@@ -1,3 +1,35 @@
+```
+# https://www.vivaolinux.com.br/dica/Driver-Realtek-8812au-para-adaptadores-WiFi-USB-D-Link-AC600-DWA-171-HW-A1-e-TP-Link-Archer-T2U-Nano
+
+Driver Realtek 8812au para adaptadores WiFi USB "D-Link AC600 - DWA-171-HW-A1" & "TP-Link Archer T2U Nano"
+
+
+ATENÇÃO: esta dica é para Ubuntu 18.04.3 e derivados, como Linux Mint 19.3, que contém o kernel v.5.3.x. Para o kernel v.4.x.x, a própria distro já traz o driver em seu repositório, com a versão do driver 4.3.
+
+Descrição do driver: versão do driver Realtek 8812au = 5.6.4. Como citado, é para kernel 5.3.x.
+
+Vamos à instalação.
+
+1. Conecte o adaptador WiFi na porta USB.
+
+2. Instale o dkms:
+
+# apt install dkms
+
+3. Instale o git, para baixar o arquivo de driver:
+
+# apt install git
+
+4. Baixe o driver rtl8812au, versão 5:
+
+# git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
+
+5. Acesse a pasta do arquivo baixado e execute o "dkms-install.sh":
+
+# ./dkms-install.sh
+
+Reinicie o computador. 
+```
 ## RTL8812AU/21AU and RTL8814AU drivers
 Only for use with Linux & Android
 
